@@ -21,5 +21,6 @@ from home.views import home_view, add_view, addrecord_view
 urlpatterns = [
     path('', home_view),
     path('add/', add_view),
+    path('home/', home_view),
     path('admin/', admin.site.urls),
 ]
