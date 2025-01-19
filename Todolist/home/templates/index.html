@@ -1,0 +1,12 @@
+<h1>Table</h1>
+<table border="1">
+        {% for x in alltasks %}
+        <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.title }}</td>
+        <td>{{ x.start_date }}</td>
+        <td>{{ x.finish_date }}</td>
+        </tr>
+        {% endfor %}
+   <p><a href="/add/">Add new task</a></p>
+</table>
