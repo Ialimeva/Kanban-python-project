@@ -16,9 +16,11 @@ def addrecord_view(request):
         title = request.POST.get ('task_title')
         start_date = request.POST.get ('start_date')
         finish_date = request.POST.get ('finish_date', default=now)
-        Tasklist.objects.create(
-            title = title,
-            start_date = start_date,
-            finish_date = finish_date
-        )
-    return redirect('/')
+        if title and start_date and finish_date:
+            Tasklist.objects.create(
+                title = title,
+                start_date = start_date,
+                finish_date = finish_date
+            )
+        return redirect('home')
+    return redirect('add')

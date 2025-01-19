@@ -1,11 +1,11 @@
-<form action="addrecord" method="POST">
+<form action={% url "addrecord" %} method="POST">
 {% csrf_token %}
 <h2>Add New Task</h2>
 <h4>Task Title:</h4>
-<input type="text" name='task_title'>
+<input type="text" name='task_title' required>
 <h4>Start Date:</h4>
-<input type="datetime-local" name='start_date'>
-<h4>End Date:3</h4>
-<input type="datetime-local" name='end_date'><br><br>
+<input type="datetime-local" name='start_date' required>
+<h4>End Date:</h4>
+<input type="datetime-local" name='end_date' required><br><br>
 <input type="submit">
 </form>
